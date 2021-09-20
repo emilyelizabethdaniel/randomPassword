@@ -42,7 +42,7 @@ function generateCapitalLetter() {
 console.log(generateCapitalLetter());
 
 function generateSpecialCharacter() {
-    var specialCharacters = ["!", "@", "#", "$", "%", "^", "&", "*"]
+    var specialCharacters = ["!", "@", "#", "$", "%", "^", "&", "*", "~", "`", "(", ")", "-", "-", "+", "=", "|", "]", "[", "{", "}", ":", ";", "'", "'", "?", "/", ">", ".", "<", ","]
     var random3 = Math.floor((Math.random() * specialCharacters.length));
     var randomSpecialCharacter = specialCharacters[random3];
     return randomSpecialCharacter;
