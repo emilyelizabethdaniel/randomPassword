@@ -7,10 +7,11 @@ var includeSpecialCharacters = true;
 
 function askTheQuestions() {
     length = window.prompt("How long do you want your password to be?");
-    var lengthAsInt = "";
-    lengthAsInt = parseInt(length);
+    if (isNaN(length)) {
+        alert("Not a number, please in put a number value, then press generate password");
+    }
     if (length < 8 || length > 128) {
-        alert("Please put in a value between 8-128");
+        alert("Please put in a value between 8-128, please press generate password");
         askTheQuestions();
     } else
         includeSpecialCharacters = window.confirm("Do you want your password to contain special characters?");
@@ -97,6 +98,7 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
+    askTheQuestions();
     var password = generatePassword();
     var passwordText = document.querySelector("#password");
 
